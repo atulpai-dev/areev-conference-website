@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>AREEV 24 - Index</title>
+  <title>AREEV 25 - Index</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -90,147 +90,214 @@
               </li>
               <li class="dropdown"><a href="#"><span>Conveners</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                 <ul>
-                  <li><a href="#"><strong>Dr. Sudesh Bekal, </strong>Professor & Dean (R & D), NMAMIT</a></li>
+                  <li><a href="#">Dr. Sudesh Bekal,<br>Professor & Dean (R & D),<br> NMAMIT</a></li>
                 </ul>
               </li>
               <li class="dropdown"><a href="#"><span>Organizing Secretary</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                 <ul>
-                  <li><a href="#"><strong>Dr. Radhakrishna,</strong> Professor, Department of CCE</a></li>
+                  <li><a href="#">Dr. Radhakrishna,<br>Professor,<br>Department of CCE</a></li>
                 </ul>
               </li>
-              <li class="dropdown"><a href="#"><span>Organizing Committee</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-              <ul>
-                  <li><a href="#"><strong>Dr. G. Srinikethan, </strong> Director (R&D – Technical), Nitte-Deemed to be University</a></li>
-                
-                
-                  <li><a href="#"><strong>Dr. Praveen Shetty,  </strong> Director (R&D – Technical), Nitte-Deemed to be University</a></li>
-               
-               
-                  <li><a href="#"><strong>Dr. A.N. Parameswaran, </strong> Director, Institute-Industry Collaboration</a></li>
-                
-                  <li><a href="#"><strong>Dr. Nagesh Prabhu,   </strong> Director (Curriculum Development), Nitte-Deemed to be University</a></li>
-                
-                  <li><a href="#"><strong>Mr. Yogeesh Hegde,  </strong> Director, Campus Maintenance and development, (NITTE DU off campus Centre)</a></li>
-               
-                  <li><a href="#"><strong>Dr. Rekha Bhandarkar,  </strong>Deputy Registrar (NITTE DU off campus Centre)</a></li>
-               
-                  <li><a href="#"><strong>Dr. Subrahmanya Bhat, </strong>Deputy Controller of Examination (NITTE DU off campus Centre)</a></li>
-               </ul>
-              </li>
+              
+              <li class="dropdown">
+                <a href="#"><span>Organizing Committee</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                    <li><a href="#">Dr. G. Srinikethan,<br>Director (R&D – Technical),<br> Nitte-Deemed to be University</a></li>
+                    <li><a href="#">Dr. Praveen Shetty,<br>Director (R&D – Technical),<br> Nitte-Deemed to be University</a></li>
+                    <li><a href="#">Dr. A.N. Parameswaran,<br>Director, Institute-Industry Collaboration</a></li>
+                    <li class="hidden1"><a href="#">Dr. Nagesh Prabhu,<br>Director (Curriculum Development),<br> Nitte-Deemed to be University</a></li>
+                    <li class="hidden1"><a href="#">Mr. Yogeesh Hegde,<br>Director,<br> Campus Maintenance and development, (NITTE DU off campus Centre)</a></li>
+                    <li class="hidden1"><a href="#">Dr. Rekha Bhandarkar,<br>Deputy Registrar (NITTE DU off campus Centre)</a></li>
+                    <li class="hidden1"><a href="#">Dr. Subrahmanya Bhat,<br>Deputy Controller of Examination (NITTE DU off campus Centre)</a></li>
+                    <li><a href="#" class="read-more">Read More</a></li>
+                </ul>
+            </li>
+            
+             
+            <script>
+              document.addEventListener("DOMContentLoaded", function() {
+                  var hiddenItems = document.querySelectorAll(".dropdown .hidden1");
+                  var readMoreLink = document.querySelector(".dropdown .read-more");
+                  
+                  hiddenItems.forEach(function(item, index) {
+                      if (index >= 0) { // Change the number to adjust how many items are initially hidden
+                          item.style.display = "none";
+                      }
+                  });
+          
+                  readMoreLink.addEventListener("click", function() {
+                      hiddenItems.forEach(function(item) {
+                          item.style.display = "list-item";
+                      });
+                      this.style.display = "none";
+                      
+                      // Add "Read Less" option
+                      var readLessLink = document.createElement("li");
+                      readLessLink.innerHTML = '<a href="#" class="read-less">Read Less</a>';
+                      readMoreLink.parentElement.appendChild(readLessLink);
+                  });
+          
+                  document.addEventListener("click", function(event) {
+                      if (event.target.classList.contains("read-less")) {
+                          hiddenItems.forEach(function(item, index) {
+                              if (index >= 0) { // Change the number to adjust how many items are initially hidden
+                                  item.style.display = "none";
+                              }
+                          });
+                          readMoreLink.style.display = "list-item";
+                          event.target.parentElement.remove(); // Remove "Read Less" option
+                      }
+                  });
+              });
+          </script>
               <li class="dropdown"><a href="#"><span>AREEV Program Chair</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                 <ul>
-                  <li><a href="#"><strong>Dr. Suryanarayana K</strong> Professor, Department of CCE</a></li>
+                  <li><a href="#">Dr. Suryanarayana K <br>Professor,<br>Department of EEE</a></li>
                 </ul>
               </li>
               <li class="dropdown"><a href="#"><span>Collaboration university:</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                 <ul>
-                  <li><a href="#"><strong></strong>Istanbul University,  Istanbul, Turkey - https://www.nisantasi.edu.tr/?dil=eng</a></li>
+                  <li><a href="https://www.nisantasi.edu.tr/?dil=eng">Istanbul University,<br>Istanbul, Turkey <br></a></li>
                 </ul>
+                <li class="dropdown">
+                  <a href="#"><span>Technical Advisory Committee</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                  <ul>
+                      <li><a href="#">Dr. Ilhami Colak, Professor, <br>İstanbul Nisantasi University</a></li>
+                      <li><a href="#">Dr. Baseem Khan, Professor, <br>Hawassa University Ethiopia</a></li>
+                      <li><a href="#">Dr. Vinu Thomas, <br>Associate Professor at LS2N,<br> Ecole Centrale de Nantes,<br>Nantes University, France</a></li>
+                      <li class="hidden"><a href="#">Dr. Lin Meng,<br>Ritsumeikan University,<br>Department of Electronic and Computer Science,<br>Kusatsu Shig, Japan</a></li>
+                      <li class="hidden"><a href="#">Dr. Sheldon Williamson,<br>Professor,<br>Department of Electrical, Computer and Software Engineering,<br>Ontario Tech University, Canada</a></li>
+                      <li class="hidden"><a href="#">Dr. H. N. Nagaraja,<br>Vice Chancellor,<br>Graphic Era (Deemed to be University)</a></li>
+                      <li class="hidden"><a href="#">Dr. Dattatraya N Gaonkar,<br>Professor and Head <br>Department of Electrical and Electronics Engineering,<br>NITK, Surathkal</a></li>
+                      <li class="hidden"><a href="#">Dr. N. Rajalakshmi,<br>Senior Scientist and Team leader,<br>Centre for Fuel Cell Technology ARCI, Chennai</a></li>
+                      <li class="hidden"><a href="#">Dr. Viji Paul,<br>Senior Research Staff,<br>CRL-BEL, Bengaluru </a></li>
+                      <li class="hidden"><a href="#">Mr. L. V. Prabhu,<br>Director,<br>HEXMOTO Controls Pvt. Ltd., Mysuru</a></li>
+                      <li class="hidden"><a href="#">Dr. Hiroaki Kakigano,<br>Professor,<br>Ritsumeikan University College of Science and Engineering,<br>Department of Electrical and Electronic Engineering,<br>Japan</a></li>
+                      <li class="hidden"><a href="#">Dr. Shreesha C,<br>Professor & Head,<br>Instrumentation & Control Engineering,<br>MIT, Manipal</a></li>
+                      <li class="hidden"><a href="#">Dr. Niranjan U. C,<br>Director,<br>Research & Training,<br>Manipal Dot Net Pvt. Ltd,<br>Chair, IEEE Mangaluru Subsection</a></li>
+                      <li class="hidden"><a href="#">Mr. S. Gopinath,<br>Former Executive Director,<br>Bharat Heavy Electricals Limited Trichy,<br>Adjunct Faculty, NMAMIT, Nitte</a></li>
+                      <li class="hidden"><a href="#">Dr. N. Lakshminarasamma,<br>Professor,<br>Department of Electrical Engineering,<br>Indian Institute of Technology, Madras</a></li>
+                      <li class="hidden"><a href="#">Mr. Vasu M,<br>Technical Director,<br>L&T Technology Services Ltd, Bengaluru</a></li>
+                      <li class="hidden"><a href="#">Mr. Vinay Gunashekharan,<br>Founder,<br>Autoven, Pune</a></li>
+                      <li class="hidden"><a href="#">Mr. Sumukh Surya,<br>Senior Software Engineer,<br>Robert Bosch Engineering and Business Solution Private Limited (RBEI), Bangalore.</a></li>
+                      <li class="hidden"><a href="#">Dr. Akhtar Kalam,<br>Professor,<br>Leader-Smart Energy Research Unit,<br>Victoria University, Australia</a></li>
+                      <li class="hidden"><a href="#">Dr. Satyendra Kumar,<br>Professor,<br>Dept. of EEE,<br>NMAMIT, Nitte</a></li>
+                      <li class="hidden"><a href="#">Dr. Rajalakshmi Samaga,<br>Professor & PG Coordinator,<br>Electrical and Electronics Engineering,<br>NMAMIT, Nitte</a></li>
+                      <li><a href="#" class="read-more1">Read More</a></li>
+                  </ul>
               </li>
-              <li class="dropdown"><a href="#"><span>Technical Advisory Committee</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                <ul>
-                <li>Dr. Ilhami Colak, Professor, İstanbul Nisantasi University</li>
-                <li>Dr. Baseem Khan, Professor, Hawassa University Ethiopia</li>
-                <li>Dr. Vinu Thomas, Associate Professor at LS2N, Ecole Centrale de Nantes, Nantes University, France</li>
-                <li>Dr. Lin Meng, Ritsumeikan University, Department of Electronic and Computer Science, Kusatsu Shig, Japan</li>
-                <li>Dr. Sheldon Williamson, Professor, Department of Electrical, Computer and Software Engineering, Ontario Tech University, Canada</li>
-                <li>Dr. H. N. Nagaraja, Vice Chancellor, Graphic Era (Deemed to be University)</li>
-                <li>Dr. Dattatraya N Gaonkar Professor and Head of the Department of Electrical and Electronics Engineering NITK, Surathkal</li>
-                <li>Dr. N. Rajalakshmi, Senior Scientist and Team leader, Centre for Fuel Cell Technology ARCI, Chennai</li>
-                <li>Dr. Viji Paul, Senior Research Staff, CRL-BEL, Bengaluru </li>
-                <li>Mr. L. V. Prabhu, Director, HEXMOTO Controls Pvt. Ltd., Mysuru</li>
-                <li>Dr. Hiroaki Kakigano, Professor, Ritsumeikan University College of Science and Engineering, Department of Electrical and Electronic Engineering, Japan</li>
-                <li>Dr. Shreesha C, Professor & Head, Instrumentation & Control Engineering, MIT, Manipal</li>
-                <li>Dr. Niranjan U. C, Director, Research & Training, Manipal Dot Net Pvt. Ltd, Chair, IEEE Mangaluru Subsection</li>
-                <li>Mr. S. Gopinath, Former Executive Director, Bharat Heavy Electricals Limited Trichy, Adjunct Faculty, NMAMIT, Nitte</li>
-                <li>Dr. N. Lakshminarasamma, Professor, Department of Electrical Engineering, Indian Institute of Technology, Madras</li>
-                <li>Mr. Vasu M, Technical Director, L&T Technology Services Ltd, Bengaluru</li>
-                <li>Mr. Vinay Gunashekharan, Founder, Autoven, Pune</li>
-                <li>Mr. Sumukh Surya, Senior Software Engineer, Robert Bosch Engineering and Business Solution Private Limited (RBEI), Bangalore.</li>
-                <li>Dr. Akhtar Kalam, Professor, Leader-Smart Energy Research Unit, Victoria University, Australia</li>
-                <li>Dr. Satyendra Kumar, Professor, Dept. of EEE, NMAMIT, Nitte</li>
-                <li>Dr. Rajalakshmi Samaga, Professor & PG Coordinator, Electrical and Electronics Engineering, NMAMIT, Nitte </li>
-
-                </ul>
-
-              </li>
-              <li class="dropdown"><a href="#"><span>Conveners</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                <ul>
-                  <li><a href="#"><strong>Dr. Sudesh Bekal, </strong>Professor & Dean (R & D), NMAMIT</a></li>
-                </ul>
-              </li>
+              
+              <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    var hiddenItems = document.querySelectorAll(".dropdown .hidden");
+                    var readMoreLink = document.querySelector(".dropdown .read-more1");
+                    
+                    hiddenItems.forEach(function(item, index) {
+                        if (index >= 0) { // Change the number to adjust how many items are initially hidden
+                            item.style.display = "none";
+                        }
+                    });
+            
+                    readMoreLink.addEventListener("click", function() {
+                        hiddenItems.forEach(function(item) {
+                            item.style.display = "list-item";
+                        });
+                        this.style.display = "none";
+                        
+                        // Add "Read Less" option
+                        var readLessLink = document.createElement("li");
+                        readLessLink.innerHTML = '<a href="#" class="read-less1">Read Less</a>';
+                        readMoreLink.parentElement.appendChild(readLessLink);
+                    });
+            
+                    document.addEventListener("click", function(event) {
+                        if (event.target.classList.contains("read-less1")) {
+                            hiddenItems.forEach(function(item, index) {
+                                if (index >= 0) { // Change the number to adjust how many items are initially hidden
+                                    item.style.display = "none";
+                                }
+                            });
+                            readMoreLink.style.display = "list-item";
+                            event.target.parentElement.remove(); // Remove "Read Less" option
+                        }
+                    });
+                });
+            </script>
+            
+              
+              
               <li class="dropdown"><a href="#"><span>AREEV Conference Secretary</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                 <ul>
-                  <li><a href="#"><strong>Dr. Girisha Joshi, </strong>Associate Professor, Department of EEE, NMAMIT</a></li>
+                  <li><a href="#">Dr. Girisha Joshi,<br>Associate Professor,<br>Department of EEE, NMAMIT</a></li>
                 </ul>
               </li>
               <li class="dropdown"><a href="#"><span>AREEV Conference Coordinators</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                 <ul>
-                  <li><a href="#"><strong>Mr. Pradeep Kumar, </strong> Assistant Professor, Department of EEE, NMAMIT</a></li>
+                  <li><a href="#">Mr. Pradeep Kumar,<br>Assistant Professor,<br> Department of EEE, NMAMIT</a></li>
                 </ul>
                 <ul>
-                  <li><a href="#"><strong>Dr. N S S Ramakrishna,  </strong>Assistant Professor, Department of EEE, NMAMIT</a></li>
+                  <li><a href="#">Dr. N S S Ramakrishna,<br>Assistant Professor,<br> Department of EEE, NMAMIT</a></li>
                 </ul>
               </li>
               <li class="dropdown"><a href="#"><span>Track Chairs</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                 <ul>
-                  <li><a href="#"><strong>Dr. Krishna Rao, </strong> Assistant Professor, Department of EEE, NMAMIT</a></li>
+                  <li><a href="#">Dr. Krishna Rao,<br> Assistant Professor,<br> Department of EEE, NMAMIT</a></li>
                 </ul>
                 <ul>
-                  <li><a href="#"><strong>Dr. K Latha Shenoy,  </strong>Associate Professor, Department of EEE, NMAMIT</a></li>
+                  <li><a href="#">Dr. K Latha Shenoy,<br> Associate Professor,<br> Department of EEE, NMAMIT</a></li>
                 </ul>
                 <ul>
-                  <li><a href="#"><strong>Dr. Dinesh Shetty,  </strong>Assistant Professor, Department of EEE, NMAMIT</a></li>
+                  <li><a href="#">Dr. Dinesh Shetty, <br> Assistant Professor,<br> Department of EEE, NMAMIT</a></li>
                 </ul>
               </li>
               <li class="dropdown"><a href="#"><span>AREEV Program Committee</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                 <ul>
                   <li class="dropdown"><a href="#"><span>Publication Committee</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                     <ul>
-                      <li><a href="#">Mr. Mahabaleshwara Sharma, Assistant Professor, Department of EEE, NMAMIT</a></li>
+                      <li><a href="#">Mr. Mahabaleshwara Sharma,<br>Assistant Professor,<br> Department of EEE, NMAMIT</a></li>
                       
                     </ul>
                   </li>
                   <li class="dropdown">
                     <a href="#"><span>Publicity Committee</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                     <ul>
-                        <li><a href="#">Dr. Anitha M Colaco, Associate Professor, Department of EEE, NMAMIT</a></li>
-                        <li><a href="#">Dr. Pramod Bhat Nempu, Assistant Professor, Department of EEE, NMAMIT</a></li>
-                        <li><a href="#">Mr. Abdul Raheman, Assistant Professor, Department of EEE, NMAMIT</a></li>
-                        <li><a href="#">Mrs. Raksha Adappa, Assistant Professor, Department of EEE, NMAMIT</a></li>
-                        <li><a href="#">Mr. Anand Bhat, Assistant Professor, Department of EEE, NMAMIT</a></li>
-                        <li><a href="#">Mr. Gururaj K, Assistant Professor, Department of EEE, NMAMIT</a></li>
-                        <li><a href="#">Mrs. Swathi K, Assistant Professor, Department of EEE, NMAMIT</a></li>
+                        <li><a href="#">Dr. Anitha M Colaco, <br>Associate Professor,<br> Department of EEE, NMAMIT</a></li>
+                        <li><a href="#">Dr. Pramod Bhat Nempu, <br>Assistant Professor,<br> Department of EEE, NMAMIT</a></li>
+                        <li><a href="#">Mr. Abdul Raheman,<br> Assistant Professor,<br> Department of EEE, NMAMIT</a></li>
+                        <li><a href="#">Mrs. Raksha Adappa,<br> Assistant Professor,<br> Department of EEE, NMAMIT</a></li>
+                        <li><a href="#">Mr. Anand Bhat,<br>Assistant Professor,<br> Department of EEE, NMAMIT</a></li>
+                        <li><a href="#">Mr. Gururaj K,<br> Assistant Professor,<br> Department of EEE, NMAMIT</a></li>
+                        <li><a href="#">Mrs. Swathi K, <br> Assistant Professor, <br>Department of EEE, NMAMIT</a></li>
                     </ul>
                 </li>
                 
                 <li class="dropdown">
                   <a href="#"><span>Sponsorship Committee</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                   <ul>
-                      <li><a href="#">Dr. Nayana Shetty, Associate Professor, Dept. of EEE, NMAMIT</a></li>
-                      <li><a href="#">Mr. Dhananjay B, Assistant Professor, Department of EEE, NMAMIT</a></li>
+                      <li><a href="#">Dr. Nayana Shetty,<br> Associate Professor,<br> Dept. of EEE, NMAMIT</a></li>
+                      <li><a href="#">Mr. Dhananjay B,<br> Assistant Professor,<br> Department of EEE, NMAMIT</a></li>
                   </ul>
               </li>
               
               <li class="dropdown">
                 <a href="#"><span>Registration</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                 <ul>
-                    <li><a href="#">Mrs. Swathi Hatwar, Assistant Professor, Department of EEE, NMAMIT</a></li>
-                    <li><a href="#">Mrs. Nuthana Shetty, Assistant Professor, Department of EEE, NMAMIT</a></li>
-                    <li><a href="#">Mrs. Palimaru Aparna, Assistant Professor, Department of EEE, NMAMIT</a></li>
+                    <li><a href="#">Mrs. Swathi Hatwar,<br>Assistant Professor,<br> Department of EEE, NMAMIT</a></li>
+                    <li><a href="#">Mrs. Nuthana Shetty,<br> Assistant Professor,<br> Department of EEE, NMAMIT</a></li>
+                    <li><a href="#">Mrs. Palimaru Aparna, <br>Assistant Professor,<br> Department of EEE, NMAMIT</a></li>
                 </ul>
             </li>
             
                   <li class="dropdown"><a href="#"><span>Food Committee</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                     <ul>
-                      <li><a href="#">Mr. Naveen J, Assistant Professor, Department of EEE, NMAMIT</a></li>
+                      <li><a href="#">Mr. Naveen J,<br> Assistant Professor,<br>Department of EEE, NMAMIT</a></li>
                      
                     </ul>
                   </li>
                   <li class="dropdown"><a href="#"><span>Accommodation </span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                     <ul>
-                      <li><a href="#">Mr. Ravikiran Rao M, Assistant Professor, Department of EEE, NMAMIT</a></li>
-                      <li><a href="#">Mr. Anup Shetty, Assistant Professor, Department of, NMAMIT</a></li>
+                      <li><a href="#">Mr. Ravikiran Rao M,<br> Assistant Professor,<br> Department of EEE, NMAMIT</a></li>
+                      <li><a href="#">Mr. Anup Shetty,<br>Assistant Professor, <br>Department of, NMAMIT</a></li>
                     </ul>
                   </li>
                   
@@ -258,7 +325,7 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-6 text-center">
-            <h2 data-aos="fade-down">Welcome to <span>AREEV 24</span></h2>
+            <h2 data-aos="fade-down">Welcome to <span>AREEV 25</span></h2>
             <p data-aos="fade-up">INTERNATIONAL CONFERENCE ON</p>
             <p data-aos="fade-up">Advances in Renewable Energy & Electric Vehicles (AREEV-2024)</p>
             <p data-aos="fade-up">ORAGNISED BY</p>
@@ -312,84 +379,50 @@
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <div class="card-item">
-              <div class="row">
-                <div class="col-xl-5">
-                  <div class="card-bg" style="background-image: url(assets/img/constructions-1.jpg);"></div>
-                </div>
-                <div class="col-xl-7 d-flex align-items-center">
-                  <div class="card-body">
+                <div class="card-bg" style="background-image: url(assets/img/constructions-1.jpg);"></div>
+                <div class="card-body">
                     <h4 class="card-title">About Nitte (Deemed to be University)</h4>
-                    <p>Nitte (Deemed-to-be University) has its roots in a group of Institutions established by the Nitte Education Trust. The Trust was established in 1979 by one of India’s respected Statesman, Late Justice KS Hegde, Supreme Court Judge and Speaker of Lok Sabha, with the mission of empowering rural youth through quality education and healthcare. The Trust has established 36 institutions spread in three campuses at Nitte, Mangalore and Bangalore. It offers education in diverse areas of learning including health professions education, engineering, management, humanities, general education, vocational training, and school/pre-university education.
-                      AB Shetty Memorial Institute of Dental Sciences (ABSMIDS), one of the colleges of the Nitte Education Trust, then affiliated to Rajiv Gandhi University of Health Sciences, was declared to be a “Deemed to be University” by Ministry of Human Resource Development on 4th June 2008. In the subsequent year (2009) KS Hegde Medical Academy (KSHEMA), Nitte Gulabi Shetty Memorial Institute of Pharmaceutical Sciences (NGSMIPS), Nitte Usha Institute of Nursing Sciences (NUINS) and Nitte Institute of Physiotherapy (NIPT) also came under the ambit of the newly formed Deemed-to-be University. Nitte Institute of Communication (NICO) was established in 2012, Nitte University Centre for Science Education and Research (NUCSER) in 2013 and Nitte Institute of Architecture (NIA) in 2015. In 2021, Nitte Institute of Speech and Hearing (NISH) became the most recent addition to the University.
-                      The University offers a total of 74 programs in the disciplines of medicine, allied health sciences, dentistry, pharmacy, nursing, physiotherapy, speech and audiology, biological sciences, media & communication and Architecture. It has 4600+ students, 575 faculty members and 2175 support staff on roll. The University campuses are spread over 52 acres in Deralakatte-Paneer areas of Mangalore.
-                      The University received A+ Grading in NAAC accreditation in 2021. It has been consistently placed in the Top 70-80 rank band in NIRF. The University is placed in the 401 to 450 Rank Band in the QS Rankings for Asia Region. It has received Diamond rating in the QS I-Gauge India Ratings. The Constituent colleges of the university have good standing in their disciplines in the NIRF rankings. In 2021, the dental college was ranked 6th and the medical college and pharmacy colleges were ranked 45th in NIRF. The BPharm program of the University is accredited by NBA. The teaching hospital is accredited by both NABH and NABL.
-                      
+                    <p>Nitte (Deemed-to-be University) has its roots in a group of Institutions established by the Nitte Education Trust. The Trust was established in 1979 by one of India’s respected Statesman, Late Justice KS Hegde, Supreme Court Judge and Speaker of Lok Sabha, with the mission of empowering rural youth through quality education and healthcare. The Trust has established 36 institutions spread in three campuses at Nitte, Mangalore and Bangalore. It offers education in diverse areas of learning including health professions education, engineering, management, humanities, general education, vocational training, and school/pre-university education. AB Shetty Memorial Institute of Dental Sciences (ABSMIDS), one of the colleges of the Nitte Education Trust, then affiliated to Rajiv Gandhi University of Health Sciences, was declared to be a “Deemed to be University” by Ministry of Human Resource Development on 4th June 2008. In the subsequent year (2009) KS Hegde Medical Academy (KSHEMA), Nitte Gulabi Shetty Memorial Institute of Pharmaceutical Sciences (NGSMIPS), Nitte Usha Institute of Nursing Sciences (NUINS) and Nitte Institute of Physiotherapy (NIPT) also came under the ambit of the newly formed Deemed-to-be University. Nitte Institute of Communication (NICO) was established in 2012, Nitte University Centre for Science Education and Research (NUCSER) in 2013 and Nitte Institute of Architecture (NIA) in 2015. In 2021, Nitte Institute of Speech and Hearing (NISH) became the most recent addition to the University. The University offers a total of 74 programs in the disciplines of medicine, allied health sciences, dentistry, pharmacy, nursing, physiotherapy, speech and audiology, biological sciences, media & communication and Architecture. It has 4600+ students, 575 faculty members and 2175 support staff on roll. The University campuses are spread over 52 acres in Deralakatte-Paneer areas of Mangalore. The University received A+ Grading in NAAC accreditation in 2021. It has been consistently placed in the Top 70-80 rank band in NIRF. The University is placed in the 401 to 450 Rank Band in the QS Rankings for Asia Region. It has received Diamond rating in the QS I-Gauge India Ratings. The Constituent colleges of the university have good standing in their disciplines in the NIRF rankings. In 2021, the dental college was ranked 6th and the medical college and pharmacy colleges were ranked 45th in NIRF. The BPharm program of the University is accredited by NBA. The teaching hospital is accredited by both NABH and NABL.
                     </p>
-                  </div>
-                
                 </div>
-              </div>
             </div>
-          </div><!-- End Card Item -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="card-item">
-              <div class="row">
-                <div class="col-xl-5">
-                  <div class="card-bg" style="background-image: url(assets/img/inst.jpg);"></div>
-                </div>
-                <div class="col-xl-7 d-flex align-items-center">
-                  <div class="card-body">
-                    <h4 class="card-title">About the Institute</h4>
-                    <p>
-                      Nitte (Deemed-to-be University) has its roots in a group of Institutions established by the Nitte Education Trust. The Trust was established in 1979 by one of India’s respected Statesman, Late Justice KS Hegde, Supreme Court Judge and Speaker of Lok Sabha, with the mission of empowering rural youth through quality education and healthcare. The Trust has established 36 institutions spread in three campuses at Nitte, Mangalore and Bangalore. It offers education in diverse areas of learning including health professions education, engineering, management, humanities, general education, vocational training, and school/pre-university education.
-AB Shetty Memorial Institute of Dental Sciences (ABSMIDS), one of the colleges of the Nitte Education Trust, then affiliated to Rajiv Gandhi University of Health Sciences, was declared to be a “Deemed to be University” by Ministry of Human Resource Development on 4th June 2008. In the subsequent year (2009) KS Hegde Medical Academy (KSHEMA), Nitte Gulabi Shetty Memorial Institute of Pharmaceutical Sciences (NGSMIPS), Nitte Usha Institute of Nursing Sciences (NUINS) and Nitte Institute of Physiotherapy (NIPT) also came under the ambit of the newly formed Deemed-to-be University. Nitte Institute of Communication (NICO) was established in 2012, Nitte University Centre for Science Education and Research (NUCSER) in 2013 and Nitte Institute of Architecture (NIA) in 2015. In 2021, Nitte Institute of Speech and Hearing (NISH) became the most recent addition to the University.
-The University offers a total of 74 programs in the disciplines of medicine, allied health sciences, dentistry, pharmacy, nursing, physiotherapy, speech and audiology, biological sciences, media & communication and Architecture. It has 4600+ students, 575 faculty members and 2175 support staff on roll. The University campuses are spread over 52 acres in Deralakatte-Paneer areas of Mangalore.
-The University received A+ Grading in NAAC accreditation in 2021. It has been consistently placed in the Top 70-80 rank band in NIRF. The University is placed in the 401 to 450 Rank Band in the QS Rankings for Asia Region. It has received Diamond rating in the QS I-Gauge India Ratings. The Constituent colleges of the university have good standing in their disciplines in the NIRF rankings. In 2021, the dental college was ranked 6th and the medical college and pharmacy colleges were ranked 45th in NIRF. The BPharm program of the University is accredited by NBA. The teaching hospital is accredited by both NABH and NABL.
-
-                    </p>
-                  </div>
-                </div>
+        </div>
+        
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="card-item">
+              <div class="card-bg" style="background-image: url(assets/img/inst.jpg);"></div>
+              <div class="card-body">
+                  <h4 class="card-title">About the Institute</h4>
+                  <p>Nitte (Deemed-to-be University) has its roots in a group of Institutions established by the Nitte Education Trust. The Trust was established in 1979 by one of India’s respected Statesman, Late Justice KS Hegde, Supreme Court Judge and Speaker of Lok Sabha, with the mission of empowering rural youth through quality education and healthcare. The Trust has established 36 institutions spread in three campuses at Nitte, Mangalore and Bangalore. It offers education in diverse areas of learning including health professions education, engineering, management, humanities, general education, vocational training, and school/pre-university education. AB Shetty Memorial Institute of Dental Sciences (ABSMIDS), one of the colleges of the Nitte Education Trust, then affiliated to Rajiv Gandhi University of Health Sciences, was declared to be a “Deemed to be University” by Ministry of Human Resource Development on 4th June 2008. In the subsequent year (2009) KS Hegde Medical Academy (KSHEMA), Nitte Gulabi Shetty Memorial Institute of Pharmaceutical Sciences (NGSMIPS), Nitte Usha Institute of Nursing Sciences (NUINS) and Nitte Institute of Physiotherapy (NIPT) also came under the ambit of the newly formed Deemed-to-be University. Nitte Institute of Communication (NICO) was established in 2012, Nitte University Centre for Science Education and Research (NUCSER) in 2013 and Nitte Institute of Architecture (NIA) in 2015. In 2021, Nitte Institute of Speech and Hearing (NISH) became the most recent addition to the University. The University offers a total of 74 programs in the disciplines of medicine, allied health sciences, dentistry, pharmacy, nursing, physiotherapy, speech and audiology, biological sciences, media & communication and Architecture. It has 4600+ students, 575 faculty members and 2175 support staff on roll. The University campuses are spread over 52 acres in Deralakatte-Paneer areas of Mangalore. The University received A+ Grading in NAAC accreditation in 2021. It has been consistently placed in the Top 70-80 rank band in NIRF. The University is placed in the 401 to 450 Rank Band in the QS Rankings for Asia Region. It has received Diamond rating in the QS I-Gauge India Ratings. The Constituent colleges of the university have good standing in their disciplines in the NIRF rankings. In 2021, the dental college was ranked 6th and the medical college and pharmacy colleges were ranked 45th in NIRF. The BPharm program of the University is accredited by NBA. The teaching hospital is accredited by both NABH and NABL.</p>
               </div>
-            </div>
-          </div><!-- End Card Item -->
+          </div>
+      </div>
+      
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="card-item">
-              <div class="row">
-                <div class="col-xl-5">
-                  <div class="card-bg" style="background-image: url(assets/img/dept.jpg);"></div>
-                </div>
-                <div class="col-xl-7 d-flex align-items-center">
-                  <div class="card-body">
-                    <h4 class="card-title">About the Organizing Department</h4>
-                    <p>The Department of Electrical & Electronics Engineering, established in 1987, offers UG and PG programs. The Department offers the undergraduate programme of B.Tech in Electrical & Electronics Engineering with an intake of 120 and Post Graduate Program M.Tech in Electric Vehicle Technology. The Department has well-qualified, passionate, dedicated faculty and has a well-connected alumni network. With the state-of-the art Laboratory in Power Electronics, Control Systems, Power Systems, Computers and High Voltage & Relay, which caters to the needs of all the Electrical & Electronics Engineering students. With an excellent rapport and MoU with industries, the Department organizes seminars, conferences, and workshops on a regular basis to cope up with the recent trends in the technological field.
-                    </p>
-                  </div>
-                </div>
-              </div>
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="card-item">
+            <div class="card-bg" style="background-image: url(assets/img/dept.jpg);"></div>
+            <div class="card-body">
+                <h4 class="card-title">About the Organizing Department</h4>
+                <p>The Department of Electrical & Electronics Engineering, established in 1987, offers UG and PG programs. The Department offers the undergraduate programme of B.Tech in Electrical & Electronics Engineering with an intake of 120 and Post Graduate Program M.Tech in Electric Vehicle Technology. The Department has well-qualified, passionate, dedicated faculty and has a well-connected alumni network. With the state-of-the art Laboratory in Power Electronics, Control Systems, Power Systems, Computers and High Voltage & Relay, which caters to the needs of all the Electrical & Electronics Engineering students. With an excellent rapport and MoU with industries, the Department organizes seminars, conferences, and workshops on a regular basis to cope up with the recent trends in the technological field.
+                </p>
             </div>
-          </div><!-- End Card Item -->
+        </div>
+    </div>
+    
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="card-item">
-              <div class="row">
-                <div class="col-xl-5">
-                  <div class="card-bg" style="background-image: url(assets/img/conf.jpg);"></div>
-                </div>
-                <div class="col-xl-7 d-flex align-items-center">
-                  <div class="card-body">
-                    
-                    <h4 class="card-title">About the Conference</h4>
-                  
-                    <p>
-                      ''Advances in Renewable Energy & Electric Vehicles" (AREEV-2025), a Two-day International Conference as a part of the Multi-Conference "International Conference on Emerging Trends in Engineering" (ICETE- 2025), will be held on 06 and 07 February 2025 in offline mode. The Conference dedicates to driving innovation in every aspect of Electrical and Electronics Engineering by facilitating a   platform for researchers, professionals, executives and practicing engineers from various research & educational institutes and industries to exchange their ideas on the Conference's theme. A series of keynote presentations, technical papers, and poster presentations are planned to discuss emerging trends & feasible solutions to shape and enable the development of mankind.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Card Item -->
+    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+      <div class="card-item">
+          <div class="card-bg" style="background-image: url(assets/img/conf.jpg);"></div>
+          <div class="card-body">
+              <h4 class="card-title">About the Conference</h4>
+              <p>
+                  ''Advances in Renewable Energy & Electric Vehicles" (AREEV-2025), a Two-day International Conference as a part of the Multi-Conference "International Conference on Emerging Trends in Engineering" (ICETE- 2025), will be held on 06 and 07 February 2025 in offline mode. The Conference dedicates to driving innovation in every aspect of Electrical and Electronics Engineering by facilitating a platform for researchers, professionals, executives and practicing engineers from various research & educational institutes and industries to exchange their ideas on the Conference's theme. A series of keynote presentations, technical papers, and poster presentations are planned to discuss emerging trends & feasible solutions to shape and enable the development of mankind.
+              </p>
+          </div>
+      </div>
+  </div>
+  
 
         </div>
 
@@ -835,7 +868,7 @@ The University received A+ Grading in NAAC accreditation in 2021. It has been co
     <div class="footer-legal text-center position-relative">
       <div class="container">
         <div class="copyright">
-          &copy; Copyright <strong><span>Arrev_24</span></strong>. All Rights Reserved
+          &copy; Copyright <strong><span>Arrev_25</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
           <!-- All the links in the footer should remain intact. -->
